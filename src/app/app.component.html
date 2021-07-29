@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+ <form [formGroup]="form" (submit)="submit(form.value)">
+  <div *ngFor="let s of addOns.controls; let j=index">
+   <input type="checkbox" [formControl]="s"/> {{user1.addOns[j].name}}
+  </div>
+  <button type="submit">
+                Calculate Premium
+        </button>
+ </form>
